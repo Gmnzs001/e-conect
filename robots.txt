@@ -1,0 +1,7 @@
+# Todos os buscadores podem acessar o site.
+# As páginas ocultas (Conteúdos e artigos) não são bloqueadas aqui de propósito:
+# elas têm "noindex" no próprio HTML, e o Google precisa acessá-las para ler essa instrução.
+User-agent: *
+Allow: /
+
+Sitemap: https://econectconsultoria.com.br/sitemap.xml

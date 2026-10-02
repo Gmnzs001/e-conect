@@ -549,6 +549,7 @@ a.channel:hover{transform:translateX(4px)}
 .page-hero--text .wrap{grid-template-columns:1fr}
 .page-hero--text h1{max-width:none}
 .page-hero__meta{margin-top:1.25rem;font-size:var(--fs-sm);color:#D2DDD5}
+.eyebrow--light{color:var(--sun)}
 
 /* variação clara (baunilhas): âmbar suave, mais sensorial */
 .page-hero--vanilla{background:var(--sun-soft);color:var(--ink)}
@@ -595,6 +596,9 @@ a.channel:hover{transform:translateX(4px)}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
 .split--reverse .split__media{order:2}
 .split__media img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:var(--r-lg)}
+/* imagem que não pode ser cortada (ex.: infográfico com texto) */
+.split__media--full{margin:0}
+.split__media--full img,.split .split__media--full img{aspect-ratio:auto;object-fit:contain;max-width:520px;margin-inline:auto}
 .split h2{font-size:var(--fs-xl)}
 .split p{margin-top:1rem;color:var(--muted);max-width:54ch}
 .split .checklist{margin-top:1.5rem}

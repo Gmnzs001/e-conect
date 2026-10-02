@@ -2,11 +2,51 @@
 # E-Conect — configuração do servidor (Hostinger / LiteSpeed ou Apache)
 # =========================================================
 
-# Força HTTPS
+# Página de erro com o visual do site
+ErrorDocument 404 /404.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Força HTTPS
   RewriteCond %{HTTPS} !=on
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # -------------------------------------------------------
+  # REDIRECIONAMENTOS DO SITE ANTIGO (WordPress) -> SITE NOVO
+  # 301 = mudou de endereço para sempre (o Google transfere a relevância)
+  # -------------------------------------------------------
+
+  # Páginas
+  RewriteRule ^solucoes-econet/?$      /#solucoes                [R=301,L,NE]
+  RewriteRule ^consultorias-econet/?$  /para-empresas.html       [R=301,L]
+  RewriteRule ^sobre-a-econet/?$       /sobre.html               [R=301,L]
+  RewriteRule ^cursos/?$               /cursos.html              [R=301,L]
+  RewriteRule ^fale-conosco/?$         /contato.html             [R=301,L]
+  RewriteRule ^blog/?$                 /conteudos.html           [R=301,L]
+
+  # Artigos do blog
+  RewriteRule ^a-rastreabilidade-de-alimentos/?$  /artigo-rastreabilidade-de-alimentos.html  [R=301,L]
+  RewriteRule ^rastreabilidade-em-frutas-legumes-e-verduras-flv-a-chave-para-uma-alimentacao-segura-e-sustentavel/?$  /artigo-rastreabilidade-flv.html  [R=301,L]
+  RewriteRule ^a-importancia-de-um-plano-de-negocios-para-propriedades-rurais/?$  /artigo-plano-de-negocios-propriedades-rurais.html  [R=301,L]
+  RewriteRule ^introducao-ao-mapeamento-de-processos-maximizando-eficiencia-e-produtividade/?$  /artigo-mapeamento-de-processos.html  [R=301,L]
+  RewriteRule ^energia-fotovoltaica-iluminando-o-caminho-para-um-futuro-sustentavel/?$  /artigo-energia-fotovoltaica.html  [R=301,L]
+
+  # Categoria e tags do blog
+  RewriteRule ^tag/plano-de-negocios/?$  /artigo-plano-de-negocios-propriedades-rurais.html  [R=301,L]
+  RewriteRule ^tag/rastreabilidade-[a-z-]+/?$  /artigo-rastreabilidade-flv.html  [R=301,L]
+  RewriteRule ^(category|tag)/.*$  /conteudos.html  [R=301,L]
+
+  # PDFs das consultorias (links antigos podem ter sido compartilhados)
+  RewriteRule ^wp-content/uploads/2024/02/Consultoria-Introducao-ao-mapeamento-de-processos-by-Helio-Rodirgues\.pdf$  /assets/docs/consultoria-mapeamento-de-processos.pdf  [R=301,L]
+  RewriteRule ^wp-content/uploads/2024/02/Consultoria-Plano-de-Negocio-para-Propriedades-Rurais-E-conect-By-Helio-Rodirgues\.pdf$  /assets/docs/consultoria-plano-de-negocio-propriedades-rurais.pdf  [R=301,L]
+  RewriteRule ^wp-content/uploads/2024/02/VENDAS-para-o-PNAE-By-Helio-Rodirgues\.pdf$  /assets/docs/consultoria-vendas-pnae.pdf  [R=301,L]
+  RewriteRule ^wp-content/uploads/2024/02/Consultoria-no-registro-de-marcas-e-patentes-E-conect\.pdf$  /assets/docs/consultoria-registro-de-marcas-e-patentes.pdf  [R=301,L]
+
+  # Conteúdo de demonstração do tema antigo e feeds: 410 = removido de vez (o Google descarta)
+  RewriteRule ^(portfolio-item|portfolio-types|offer-types|slide-types)(/.*)?$  -  [G,L]
+  RewriteRule ^(comments/)?feed/?$  -  [G,L]
+  RewriteRule ^[a-z0-9-]+/feed/?$  -  [G,L]
 </IfModule>
 
 # Compressão de arquivos de texto (HTML, CSS, JS, SVG)

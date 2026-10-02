@@ -5,6 +5,7 @@
 | Arquivo | Uso | Observação |
 |---|---|---|
 | artigo-rastreabilidade-lei.jpg | Artigo "A rastreabilidade de alimentos" | Arte de divulgação da própria E-Conect |
+| baunilha-anatomia-flor.jpg | Baunilhas ("Conheça a flor da baunilha") | Infográfico fornecido pelo responsável do site em 02/10/2026. Corrigir a seta de "Coluna" (aponta para uma tépala). Confirmar origem e direitos de uso. |
 | logo-econect-oficial.png | Ainda não usado no site | Logotipo oficial ("e-conect · sustentabilidade & sintropia"), só 300×100 px — pedir arquivo original (SVG ou PNG grande) |
 
 ## Imagens de demonstração

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Páginas públicas do site. Conteúdos, artigos e 404 ficam de fora (ocultas / noindex).
+     Atualizar <lastmod> quando uma página mudar. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://econectconsultoria.com.br/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/para-empresas.html</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/para-produtores.html</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/rastreabilidade-flv.html</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/cursos.html</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/baunilhas.html</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/sobre.html</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/contato.html</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/politica-de-privacidade.html</loc><lastmod>2026-10-02</lastmod></url>
+</urlset>
