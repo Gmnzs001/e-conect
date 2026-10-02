@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Introdução ao mapeamento de processos: maximizando eficiência e produtividade | E-Conect</title>
+<meta name="description" content="O que é mapeamento de processos, por que ele importa e como começar a usar essa ferramenta para ganhar eficiência.">
+<meta name="theme-color" content="#1E3D2C">
+<meta name="robots" content="noindex, follow">
+
+<!-- Open Graph — domínio final: econectconsultoria.com.br -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="E-Conect Consultoria">
+<meta property="og:title" content="Introdução ao mapeamento de processos: maximizando eficiência e produtividade">
+<meta property="og:description" content="O que é mapeamento de processos, por que ele importa e como começar a usar essa ferramenta para ganhar eficiência.">
+<meta property="og:url" content="https://econectconsultoria.com.br/artigo-mapeamento-de-processos.html">
+<meta property="og:image" content="https://econectconsultoria.com.br/assets/img/empresas-hero-reuniao.jpg">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-a97232.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/figtree-latin-dab710.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ÍCONES (sprite) — mesmo bloco em todas as páginas -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15"/><path d="M5 19c3-4 6-6.5 10-8.5"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H7"/><circle cx="9.5" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></symbol>
+  <symbol id="i-trace" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><path d="M8 8h3v3H8zM13 13h3v3h-3zM13 8h3M8 13v3"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C6.5 4.3 9.3 4.3 12 6c2.7-1.7 5.5-1.7 8-.5V19c-2.5-1.2-5.3-1.2-8 .5-2.7-1.7-5.5-1.7-8-.5z"/><path d="M12 6v13.5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c.8-3.6 3.6-5.6 7-5.6s6.2 2 7 5.6"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2-2.1C18.2 5.6 12 5.6 12 5.6s-6.2 0-8 .5a3 3 0 0 0-2 2.1A31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2 2.1c1.8.5 8 .5 8 .5s6.2 0 8-.5a3 3 0 0 0 2-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8zM10 15V9l5.2 3z"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 9h3v12H3zM9 9h2.9v1.7c.5-.9 1.7-1.9 3.5-1.9 3.6 0 4.3 2.4 4.3 5.4V21h-3v-6c0-1.4 0-3.3-2-3.3s-2.3 1.6-2.3 3.2V21H9z"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 12v6M9.5 15.5 12 18l2.5-2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5L16 14l4 1.5V19a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-cert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><path d="m8.5 13.5-1.5 7 5-2.5 5 2.5-1.5-7"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="m3 7.5 9 4.5 9-4.5M12 12v9"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h12v10H2zM14 9h4l3 3.5V16h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-recycle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.5a1.5 1.5 0 0 1-1.3-2.2L5.5 13M17 19h2.5a1.5 1.5 0 0 0 1.3-2.2L18 12M9.5 5.5l1.2-2a1.5 1.5 0 0 1 2.6 0L16 8"/><path d="m14 19 3 0-1.5-2.5M4 11l1.5 2L8 12M14.5 8.5 16 8l.5-2.5"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7L11.5 6.8"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1.5-1.5"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16"/><path d="m7.5 15 3.5-4 3 2.5 5-6"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12.5V4h8.5L21 13.5 13.5 21z"/><circle cx="7.5" cy="8.5" r="1.4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><path d="M15.5 4.9a3.2 3.2 0 0 1 0 6.2M17.5 14.7c1.9.6 3.2 2.2 3.5 4.8"/></symbol>
+  <symbol id="i-puzzle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3.5a2 2 0 1 1 4 0H15v3.5a2 2 0 1 1 0 4V20H4v-4.5a2 2 0 1 0 0-4z"/></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-9"/><path d="M12 12c0-4-3-6.5-7.5-6.5C4.5 9.5 7.5 12 12 12zM12 10c0-3.5 2.5-6 7-6 0 3.8-2.5 6-7 6z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-flower" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="2.2"/><path d="M12 6.8C12 4 10.5 3 9.5 3S7 4.2 8.2 6.5M14.2 9.2c2.8 0 3.8-1.5 3.8-2.5s-1.2-2.5-3.5-1.3M9.8 9.2C7 9.2 6 10.7 6 11.7s1.2 2.5 3.5 1.3M12 11.2c0 2.8 1.5 3.8 2.5 3.8s2.5-1.2 1.3-3.5M12 11.5V21M12 17c-2-2-4.5-2-6-1"/></symbol>
+  <symbol id="i-chef" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 14a4 4 0 0 1-.6-7.9 5.5 5.5 0 0 1 11.2 0A4 4 0 0 1 17 14v6H7z"/><path d="M7 17h10"/></symbol>
+</svg>
+
+<!-- HEADER:START — manter idêntico em todas as páginas -->
+<!-- Contatos a confirmar antes da publicação -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar__contacts">
+      <a href="tel:+5562998366257">(62) 99836-6257</a>
+      <a href="tel:+5562984654587">(62) 98465-4587</a>
+      <a href="mailto:atendimento@econectconsultoria.com.br">atendimento@econectconsultoria.com.br</a>
+    </div>
+    <div class="topbar__social">
+      <a href="https://www.instagram.com/e.conect.blockchain/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/channel/UCEun-vdERf80KDHBt8Cn-lw" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.linkedin.com/in/h%C3%A9lio-rodrigues-54689132/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <!-- Substituir pelo logotipo oficial (SVG ou PNG) -->
+      <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="10" fill="#1E3D2C"/>
+        <circle cx="27" cy="13" r="5" fill="#F1A814"/>
+        <path d="M8 30c4-7 9-10.5 16-11.5M8 24.5c3-3.5 6.5-5.5 11-6" stroke="#E9EFE6" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="logo__text">E-Conect <small>Consultoria</small></span><span class="sr-only"> – página inicial</span>
+    </a>
+
+    <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+
+    <nav class="nav" id="menu" aria-label="Menu principal">
+      <ul class="nav__list">
+        <li><a href="para-empresas.html">Para empresas</a></li>
+        <li><a href="para-produtores.html">Para produtores</a></li>
+        <li><a href="rastreabilidade-flv.html">Rastreabilidade FLV</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="baunilhas.html">Baunilhas</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+      <a class="btn btn--forest" href="contato.html" data-wa="Olá, gostaria de falar com um especialista da E-Conect.">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg>Falar com um especialista
+      </a>
+    </nav>
+  </div>
+</header>
+<!-- HEADER:END -->
+
+<main id="conteudo">
+
+<!-- Artigo migrado do blog antigo (econectconsultoria.com.br/introducao-ao-mapeamento-de-processos-maximizando-eficiencia-e-produtividade/). Página oculta: fora do menu, acessada por Conteúdos. -->
+
+<section class="page-hero page-hero--text">
+  <div class="wrap">
+    <div>
+      <nav aria-label="Você está em"><ol class="breadcrumb"><li><a href="index.html">Início</a></li><li><a href="conteudos.html">Conteúdos</a></li><li aria-current="page">Mapeamento de processos</li></ol></nav>
+      <h1 class="article-title">Introdução ao mapeamento de processos: maximizando eficiência e produtividade</h1>
+      <p class="page-hero__meta"><span class="post__cat-dark">Gestão e processos</span> · <time datetime="2024-02-23">23 de fevereiro de 2024</time> · Leitura de 2 min</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap article">
+    <article class="prose">
+      <!-- SUBSTITUIR: imagem de demonstração (ver assets/img/CREDITOS.md) -->
+      <figure class="article__figure">
+        <img src="assets/img/empresas-hero-reuniao.jpg" srcset="assets/img/empresas-hero-reuniao-640.webp 640w, assets/img/empresas-hero-reuniao-960.webp 960w" sizes="(max-width: 860px) 100vw, 50vw" width="960" height="640" fetchpriority="high" alt="Profissionais em reunião em volta de uma mesa com notebook">
+      </figure>
+<p>No mundo empresarial dinâmico e competitivo de hoje, entender e otimizar os processos internos é fundamental para o sucesso. Aqui entra o mapeamento de processos, uma ferramenta poderosa que oferece visibilidade e compreensão detalhada de como as atividades empresariais são executadas, desde as tarefas diárias até os fluxos de trabalho mais complexos. Este post oferece uma introdução ao mapeamento de processos, destacando sua importância, benefícios e como ele pode transformar a maneira como as empresas operam.</p>
+<h2>O Que é Mapeamento de Processos?</h2>
+<p>Mapeamento de processos é a técnica de usar diagramas ou fluxogramas para representar visualmente os passos de um processo de negócio. Este mapa detalha cada etapa do processo, quem é responsável por ela, como e quando as etapas ocorrem, e quais são os inputs e outputs. O objetivo é fornecer uma compreensão clara de cada processo, identificando oportunidades de melhoria, ineficiências, gargalos e redundâncias.</p>
+<h2>Por Que é Importante?</h2>
+<p><strong>Visibilidade Aumentada</strong>: Oferece uma visão clara de todos os processos da empresa, permitindo que gestores e colaboradores compreendam melhor suas funções e como elas se encaixam no quadro geral.</p>
+<p><strong>Identificação de Ineficiências</strong>: Ao visualizar o processo de ponta a ponta, é mais fácil identificar etapas desnecessárias, gargalos e áreas que requerem otimização.</p>
+<p><strong>Melhoria Contínua</strong>: Facilita a implementação de melhorias contínuas, permitindo que as empresas se adaptem mais rapidamente às mudanças do mercado e às demandas dos clientes.</p>
+<p><strong>Padronização de Processos</strong>: Ajuda na padronização de processos, garantindo consistência e qualidade na entrega de produtos ou serviços.</p>
+<h2>Como Começar?</h2>
+<ol>
+<li><strong>Identifique os Processos a Serem Mapeados</strong>: Comece com processos que são críticos para a operação da empresa ou que são conhecidos por terem problemas.</li>
+<li><strong>Reúna a Equipe Certa</strong>: Inclua pessoas que estão diretamente envolvidas no processo, além de especialistas em mapeamento de processos, se possível.</li>
+<li><strong>Colete Dados</strong>: Reúna todas as informações necessárias sobre o processo, incluindo etapas, responsabilidades, cronogramas e recursos.</li>
+<li><strong>Desenhe o Mapa do Processo</strong>: Utilize ferramentas de mapeamento de processos ou simplesmente comece com papel e caneta para esboçar o fluxo das atividades.</li>
+<li><strong>Analise e Otimize</strong>: Com o mapa completo, analise o processo para identificar áreas de melhoria. Implemente mudanças e monitore os resultados.</li>
+</ol>
+<h2>Ferramentas de Mapeamento de Processos</h2>
+<p>Existem várias ferramentas disponíveis para auxiliar no mapeamento de processos, desde softwares especializados como Visio, Lucidchart e Bizagi até ferramentas mais simples como planilhas e desenhos em papel. A escolha da ferramenta depende da complexidade do processo e dos recursos disponíveis.</p>
+<h2>Conclusão</h2>
+<p>O mapeamento de processos é mais do que apenas uma ferramenta de gestão; é um catalisador para a transformação empresarial. Ao fornecer uma compreensão profunda dos processos de negócios, ele permite que as empresas identifiquem ineficiências, melhorem a produtividade e promovam uma cultura de melhoria contínua. Se você ainda não está utilizando o mapeamento de processos em sua organização, agora é o momento de começar a explorar seu potencial para desbloquear melhorias significativas e impulsionar o sucesso empresarial.</p>
+
+    </article>
+
+    <aside class="article__aside">
+      <div class="article__cta">
+        <h2>Quer mapear os processos da sua empresa?</h2>
+        <p>Desenhamos o fluxo atual, encontramos gargalos e organizamos o caminho.</p>
+        <a class="btn btn--forest" href="para-empresas.html#mapeamento-de-processos">Conhecer a solução</a>
+        <a class="btn btn--outline" href="contato.html" data-wa="Olá, li o artigo sobre mapeamento de processos e gostaria de falar com um especialista."><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar pelo WhatsApp</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section section--sage">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="mark-title">Outros artigos</h2>
+    </div>
+    <ul class="related">
+          <li><a class="link-arrow" href="artigo-rastreabilidade-de-alimentos.html">A rastreabilidade de alimentos<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a class="link-arrow" href="artigo-plano-de-negocios-propriedades-rurais.html">A importância de um plano de negócios para propriedades rurais<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a class="link-arrow" href="artigo-energia-fotovoltaica.html">Energia fotovoltaica: iluminando o caminho para um futuro sustentável<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a class="link-arrow" href="artigo-rastreabilidade-flv.html">Rastreabilidade em frutas, legumes e verduras (FLV): a chave para uma alimentação segura e sustentável<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER:START — manter idêntico em todas as páginas -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__about">
+      <span class="logo__text">E-Conect</span>
+      <p>Consultoria, rastreabilidade FLV e capacitação para negócios rurais e urbanos.</p>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/e.conect.blockchain/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=100094475183364" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+        <a href="https://www.youtube.com/channel/UCEun-vdERf80KDHBt8Cn-lw" target="_blank" rel="noopener" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-yt"/></svg></a>
+        <a href="https://www.linkedin.com/in/h%C3%A9lio-rodrigues-54689132/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true"><use href="#i-in"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h2>Soluções</h2>
+      <ul>
+        <li><a href="para-empresas.html">Para empresas</a></li>
+        <li><a href="para-produtores.html">Para produtores</a></li>
+        <li><a href="rastreabilidade-flv.html">Rastreabilidade FLV</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="baunilhas.html">Baunilhas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>E-Conect</h2>
+      <ul>
+        <li><a href="sobre.html">Sobre a E-Conect</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="politica-de-privacidade.html">Política de privacidade</a></li>
+      </ul>
+    </div>
+    <div>
+      <!-- Contatos a confirmar antes da publicação -->
+      <h2>Contato</h2>
+      <ul>
+        <li><a href="tel:+5562998366257">(62) 99836-6257</a></li>
+        <li><a href="contato.html" data-wa="">WhatsApp</a></li>
+        <li><a href="mailto:atendimento@econectconsultoria.com.br">atendimento@econectconsultoria.com.br</a></li>
+        <li>Goiânia – GO</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="wrap">
+      <span>© <span id="ano">2026</span> E-Conect Consultoria. Todos os direitos reservados.</span>
+      <span>Petit Nurse Ltda. – ME · CNPJ 00.832.222/0001-70</span>
+      <span class="footer__signature">Feito por <a href="https://gamstudiobr.com/" target="_blank" rel="noopener">GAMStudioBR.com</a> com <span class="heart" role="img" aria-label="amor">♥</span></span>
+      <!-- Remover quando as fotos de demonstração forem trocadas por fotos reais -->
+      <p class="footer__credits">Fotos de demonstração: USDA, StockSnap, rawpixel e Wikimedia Commons (domínio público); via Wikimedia Commons: favas curadas de baunilha por Diego Delso, favas verdes por Krzysztof Ziarnek e alho negro por Jacek Halicki (<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" target="_blank" rel="noopener">CC BY-SA 4.0</a>); flor de baunilha por Malcolm Manners (<a href="https://creativecommons.org/licenses/by/2.0/deed.pt-br" target="_blank" rel="noopener">CC BY 2.0</a>).</p>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<a class="wa-float" href="contato.html" data-wa="" aria-label="Conversar pelo WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
