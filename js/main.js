@@ -28,26 +28,56 @@ document.querySelectorAll('[data-wa]').forEach(el => {
    --------------------------------------------------------- */
 const toggle = document.querySelector('.nav__toggle');
 const nav = document.getElementById('menu');
+const isMobile = () => window.matchMedia('(max-width: 960px)').matches;
 
 function setMenu(open) {
   toggle.setAttribute('aria-expanded', String(open));
   toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
   nav.classList.toggle('is-open', open);
+  document.documentElement.classList.toggle('menu-open', open);
+  if (open && dropItem) setDrop(true);   // no celular, as soluções já aparecem abertas
+}
+
+/* Painel "Soluções" */
+const dropItem = document.querySelector('.nav__item--menu');
+const dropBtn = dropItem && dropItem.querySelector('.nav__trigger');
+function setDrop(open) {
+  dropItem.classList.toggle('is-open', open);
+  dropBtn.setAttribute('aria-expanded', String(open));
+}
+
+if (dropItem) {
+  const canHover = () => window.matchMedia('(hover: hover)').matches && !isMobile();
+  let hoverTimer;
+  dropBtn.addEventListener('click', e => {
+    // com mouse no desktop o painel já abre no hover: o clique não deve fechá-lo
+    const byMouseOnDesktop = e.detail > 0 && canHover();
+    setDrop(byMouseOnDesktop ? true : !dropItem.classList.contains('is-open'));
+  });
+  dropItem.addEventListener('mouseenter', () => { if (canHover()) { clearTimeout(hoverTimer); setDrop(true); } });
+  dropItem.addEventListener('mouseleave', () => { if (canHover()) hoverTimer = setTimeout(() => setDrop(false), 120); });
+  dropItem.addEventListener('focusout', e => { if (!isMobile() && !dropItem.contains(e.relatedTarget)) setDrop(false); });
+  document.addEventListener('click', e => { if (!isMobile() && !dropItem.contains(e.target)) setDrop(false); });
 }
 
 if (toggle && nav) {
   toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { if (isMobile()) setMenu(false); }));
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
+    if (e.key !== 'Escape') return;
+    if (dropItem && dropItem.classList.contains('is-open') && !isMobile()) { setDrop(false); dropBtn.focus(); return; }
+    if (nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
   });
+  // se a tela mudar de celular para desktop com o menu aberto
+  window.matchMedia('(max-width: 960px)').addEventListener('change', () => { setMenu(false); if (dropItem) setDrop(false); });
 }
 
-/* Marca no menu a página atual */
+/* Marca no menu a página atual (e destaca "Soluções" se for uma das soluções) */
 const currentPage = location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav__list a').forEach(a => {
   if (a.getAttribute('href') === currentPage) a.setAttribute('aria-current', 'page');
 });
+if (dropBtn && dropItem.querySelector('[aria-current="page"]')) dropBtn.classList.add('is-current');
 
 /* ---------------------------------------------------------
    CARROSSEL (depoimentos)
