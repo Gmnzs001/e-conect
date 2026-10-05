@@ -153,6 +153,8 @@ ul,ol{margin:0;padding:0;list-style:none}
   border-bottom:2px solid transparent;white-space:nowrap}
 .nav__list a:hover{border-color:var(--sun)}
 .nav__list a[aria-current="page"]{border-color:var(--forest);color:var(--forest)}
+/* ícone de link externo (ex.: Blog) */
+.ext{display:inline-block;width:.8em;height:.8em;margin-left:.3em;vertical-align:-.05em;opacity:.65}
 .nav .btn{white-space:nowrap;padding-inline:1.25rem}
 .nav__toggle{display:none;width:48px;height:48px;border:1px solid var(--line);border-radius:var(--r-sm);
   background:transparent;cursor:pointer;align-items:center;justify-content:center}
