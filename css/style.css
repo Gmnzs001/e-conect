@@ -263,18 +263,19 @@ ul,ol{margin:0;padding:0;list-style:none}
    FAIXA DE CREDIBILIDADE
    ========================================================= */
 .cred{background:var(--paper);border-bottom:1px solid var(--line)}
-.cred__list{display:grid;grid-template-columns:1.3fr repeat(4,1fr)}
-.cred__item{display:flex;align-items:center;gap:.75rem;padding:1.75rem 1rem;border-left:1px solid var(--line);
-  font-weight:600;font-size:1rem;line-height:1.3}
-.cred__item:first-child{border-left:0;padding-left:0}
-.cred__item svg{width:28px;height:28px;color:var(--forest-2);flex:none}
+.cred__list{display:grid;grid-template-columns:1.2fr repeat(3,1fr)}
+.cred__item{display:flex;flex-direction:column;justify-content:center;gap:.2rem;padding:1.75rem 1.5rem;border-left:1px solid var(--line);
+  font-size:1rem;line-height:1.35}
+.cred__item strong{font:600 1.125rem/1.25 var(--font-display);color:var(--ink)}
+.cred__item span{color:var(--muted)}
+.cred__item:first-child{flex-direction:row;justify-content:flex-start;align-items:center;gap:.9rem;border-left:0;padding-left:0}
 .cred__num{font:700 clamp(2.5rem,2rem + 2vw,3.25rem)/1 var(--font-display);color:var(--forest);letter-spacing:-.03em}
-.cred__num-label{font-weight:500;color:var(--muted);font-size:1rem}
+.cred__item .cred__num{color:var(--forest)}
+.cred__num-label{font-weight:500;max-width:14ch}
 @media (max-width:960px){
-  .cred__list{grid-template-columns:1fr 1fr}
-  .cred__item{border-left:0;border-top:1px solid var(--line);padding:1.25rem 0}
-  .cred__item:first-child{grid-column:1/-1;border-top:0}
-  .cred__item:nth-child(odd):not(:first-child){padding-left:1rem;border-left:1px solid var(--line)}
+  .cred__list{grid-template-columns:1fr}
+  .cred__item{border-left:0;border-top:1px solid var(--line);padding:1rem 0}
+  .cred__item:first-child{border-top:0}
 }
 
 /* =========================================================
@@ -486,6 +487,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .footer__bottom{border-top:1px solid #3A2C24}
 .footer__bottom .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;padding-block:1.25rem;
   grid-template-columns:none;font-size:var(--fs-sm)}
+.footer__address{color:#CDB9A7;font-size:var(--fs-sm);line-height:1.5}
 .footer__credits{flex-basis:100%;color:#B39F8E;font-size:.875rem}
 .footer__credits a{text-decoration:underline}
 @media (max-width:860px){.footer .wrap{grid-template-columns:1fr 1fr}.footer__about{grid-column:1/-1}}
