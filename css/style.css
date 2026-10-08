@@ -860,6 +860,7 @@ a.channel:hover{border-color:var(--forest)}
 
 .section--vanilla{background:var(--sun-soft)}
 .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.info-grid--2{grid-template-columns:repeat(2,1fr)}
 .info{background:var(--paper);border:1px solid #EED9A6;border-radius:var(--r-md);padding:1.25rem 1.4rem;display:flex;flex-direction:column;gap:.5rem}
 .section--paper .info,.section--sage .info{border-color:var(--line)}
 .info > svg{width:26px;height:26px;color:var(--forest-2)}
@@ -986,3 +987,4 @@ a.info:hover{border-color:var(--forest);transform:translateY(-2px)}
 .post--example{border-style:dashed;border-color:#C9B47E}
 @media (max-width:960px){.posts{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.posts{grid-template-columns:1fr}}
+.placeholder.empty-state{border:1px solid var(--line);background:var(--paper)}
