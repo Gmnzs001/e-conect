@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Páginas públicas do site. Conteúdos, artigos e 404 ficam de fora (ocultas / noindex).
+<!-- Páginas indexáveis do site (Conteúdos e artigos ficam fora do menu, mas entram no Google).
      Atualizar <lastmod> quando uma página mudar. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://econectconsultoria.com.br/</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://econectconsultoria.com.br/para-empresas.html</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://econectconsultoria.com.br/para-produtores.html</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://econectconsultoria.com.br/rastreabilidade-flv.html</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://econectconsultoria.com.br/cursos.html</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://econectconsultoria.com.br/baunilhas.html</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://econectconsultoria.com.br/sobre.html</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://econectconsultoria.com.br/contato.html</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://econectconsultoria.com.br/politica-de-privacidade.html</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/para-empresas.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/para-produtores.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/rastreabilidade-flv.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/cursos.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/baunilhas.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/sobre.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/contato.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/politica-de-privacidade.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/conteudos.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/artigo-inc-02-2018-produtor.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/artigo-rastreabilidade-de-alimentos.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/artigo-rastreabilidade-flv.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/artigo-plano-de-negocios-propriedades-rurais.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/artigo-mapeamento-de-processos.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://econectconsultoria.com.br/artigo-energia-fotovoltaica.html</loc><lastmod>2026-10-09</lastmod></url>
 </urlset>
