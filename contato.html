@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-a97232.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/figtree-latin-dab710.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=c03267b9">
+<link rel="stylesheet" href="css/style.css?v=484cd95f">
 </head>
 
 <body>
@@ -94,7 +94,10 @@
 <header class="header">
   <div class="wrap">
     <a href="index.html" class="logo">
-      <img class="logo__img" src="assets/img/logo-econect-h.webp" width="383" height="112" alt="E-Conect – sustentabilidade &amp; sintropia – página inicial">
+      <picture>
+        <source media="(max-width: 560px)" srcset="assets/img/logo-econect-compacto.webp" width="324" height="84">
+        <img class="logo__img" src="assets/img/logo-econect-h.webp" width="383" height="112" alt="E-Conect – sustentabilidade &amp; sintropia – página inicial">
+      </picture>
     </a>
 
     <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span></button>
@@ -189,7 +192,7 @@
         </a>
         <a class="channel" href="mailto:atendimento@econectconsultoria.com.br">
           <span class="channel__icon"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
-          <span><small>E-mail</small><strong>atendimento@econectconsultoria.com.br</strong></span>
+          <span><small>E-mail</small><strong>atendimento@<wbr>econectconsultoria.com.br</strong></span>
         </a>
         <div class="channel">
           <span class="channel__icon"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>

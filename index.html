@@ -55,7 +55,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-a97232.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/figtree-latin-dab710.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=c03267b9">
+<link rel="stylesheet" href="css/style.css?v=484cd95f">
 </head>
 
 <body>
@@ -125,7 +125,10 @@
 <header class="header">
   <div class="wrap">
     <a href="index.html" class="logo">
-      <img class="logo__img" src="assets/img/logo-econect-h.webp" width="383" height="112" alt="E-Conect – sustentabilidade &amp; sintropia – página inicial">
+      <picture>
+        <source media="(max-width: 560px)" srcset="assets/img/logo-econect-compacto.webp" width="324" height="84">
+        <img class="logo__img" src="assets/img/logo-econect-h.webp" width="383" height="112" alt="E-Conect – sustentabilidade &amp; sintropia – página inicial">
+      </picture>
     </a>
 
     <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span></button>
@@ -354,6 +357,47 @@
       <li class="step"><h3>Criamos um plano de ação</h3><p>Definimos prioridades, responsáveis e prazos em um plano simples de seguir.</p></li>
       <li class="step"><h3>Acompanhamos a aplicação</h3><p>Seguimos junto na execução e ajustamos o plano conforme os resultados aparecem.</p></li>
     </ol>
+  </div>
+</section>
+
+<!-- DO BLOG — posts escolhidos do blog do Hélio (fixos: o blog também tem posts fora do tema).
+     Para trocar: atualizar título, data, resumo, link e imagem (assets/img/blog-*.webp). -->
+<section class="section section--sage">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="mark-title">Do blog</h2>
+      <p>Publicações recentes do Hélio Rodrigues sobre cultivo, rastreabilidade e produção.</p>
+    </div>
+    <div class="posts">
+      <article class="post">
+        <img src="assets/img/blog-baunilhas-cerrado.webp" width="800" height="500" loading="lazy" alt="Pé de baunilha com favas verdes num viveiro com tela de sombreamento">
+        <div class="post__body">
+          <div class="post__meta"><span class="post__cat">Baunilhas</span><time datetime="2026-09-17">17 set. 2026</time></div>
+          <h3>Baunilhas no Cerrado do Brasil</h3>
+          <p>O cultivo de baunilha como alternativa de renda para pequenos produtores: alto valor comercial e possibilidade de plantio em pequenas áreas.</p>
+          <a class="link-arrow" href="https://perfacilitadorhelio.blogspot.com/2026/09/baunilhas-no-cerrado-do-brasil.html" target="_blank" rel="noopener">Ler no blog<span class="sr-only">: Baunilhas no Cerrado do Brasil</span><span class="sr-only"> (abre em nova aba)</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <article class="post">
+        <img src="assets/img/blog-rastreabilidade-vegetal.webp" width="800" height="500" loading="lazy" alt="Quiabos recém-colhidos separados em lotes sobre uma bancada">
+        <div class="post__body">
+          <div class="post__meta"><span class="post__cat">Rastreabilidade</span><time datetime="2026-04-18">18 abr. 2026</time></div>
+          <h3>Rastreabilidade vegetal, você já tinha ouvido falar?</h3>
+          <p>Da IN 02/2018 ao uso de blockchain: por que a rastreabilidade deixou de ser só obrigação e virou diferencial.</p>
+          <a class="link-arrow" href="https://perfacilitadorhelio.blogspot.com/2026/04/rastreabilidade-vegetal-voce-ja-tinha.html" target="_blank" rel="noopener">Ler no blog<span class="sr-only">: Rastreabilidade vegetal, você já tinha ouvido falar?</span><span class="sr-only"> (abre em nova aba)</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <article class="post">
+        <img src="assets/img/blog-alho.webp" width="800" height="500" loading="lazy" alt="Cabeças e dentes de alho sobre uma mesa de madeira">
+        <div class="post__body">
+          <div class="post__meta"><span class="post__cat">Cultivo</span><time datetime="2025-09-18">18 set. 2025</time></div>
+          <h3>Alho</h3>
+          <p>Origem, clima e temperatura: o que influencia a produtividade e a qualidade dos bulbos.</p>
+          <a class="link-arrow" href="https://perfacilitadorhelio.blogspot.com/2025/09/alho.html" target="_blank" rel="noopener">Ler no blog<span class="sr-only">: Alho</span><span class="sr-only"> (abre em nova aba)</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+    </div>
+    <p class="blog-more"><a class="link-arrow" href="https://perfacilitadorhelio.blogspot.com/" target="_blank" rel="noopener">Ver todas as publicações<span class="sr-only"> (abre em nova aba)</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
   </div>
 </section>
 
