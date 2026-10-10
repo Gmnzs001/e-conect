@@ -21,7 +21,7 @@ ErrorDocument 404 /404.html
   RewriteRule ^solucoes-econet/?$      /#solucoes                [R=301,L,NE]
   RewriteRule ^consultorias-econet/?$  /para-empresas.html       [R=301,L]
   RewriteRule ^sobre-a-econet/?$       /sobre.html               [R=301,L]
-  RewriteRule ^cursos/?$               /cursos.html              [R=301,L]
+  RewriteRule ^cursos(/|\.html)?$     /consultorias.html        [R=301,L]
   RewriteRule ^fale-conosco/?$         /contato.html             [R=301,L]
   RewriteRule ^blog/?$                 /conteudos.html           [R=301,L]
 
