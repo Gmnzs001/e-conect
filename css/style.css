@@ -835,12 +835,12 @@ a.channel:hover{border-color:var(--forest)}
 @media (max-width:860px){.courses{grid-template-columns:1fr}}
 @media (max-width:420px){.course__meta{grid-template-columns:1fr}.course__actions .btn{width:100%}}
 
-.formats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.formats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
 .format{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:1.25rem;display:flex;flex-direction:column;gap:.5rem}
 .format svg{width:26px;height:26px;color:var(--forest-2)}
 .format h3{font-size:1.125rem}
 .format p{color:var(--muted);font-size:1rem}
-@media (max-width:960px){.formats{grid-template-columns:1fr 1fr}}
+@media (max-width:960px){.formats{grid-template-columns:1fr 1fr}.format:last-child:nth-child(odd){grid-column:1/-1}}
 @media (max-width:520px){.formats{grid-template-columns:1fr}}
 
 /* =========================================================
