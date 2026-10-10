@@ -209,6 +209,98 @@ if ('IntersectionObserver' in window && !prefersReduced) {
   });
 }
 
+/* ---------------------------------------------------------
+   BAUNILHAS: "Como a fava verde vira baunilha"
+   A fava muda de cor, textura e forma conforme as etapas passam.
+   As cores de cada etapa ficam na tabela abaixo; entre uma etapa e
+   outra, os valores são misturados para a transição ficar contínua.
+   --------------------------------------------------------- */
+document.querySelectorAll('[data-bean]').forEach(section => {
+  const stage = section.querySelector('.bean-stage');
+  const tilt = section.querySelector('.bean-stage__tilt');
+  const hl = section.querySelector('[data-hl]');
+  const body = section.querySelector('[data-bean-body]');
+  const steps = [...section.querySelectorAll('.bean-step')];
+  const countEl = section.querySelector('[data-bean-count]');
+  const labelEl = section.querySelector('[data-bean-label]');
+  const barEl = section.querySelector('[data-bean-bar]');
+  if (!stage || !steps.length) return;
+
+  //        base       escura     clara      textura   ponta rugas brilho largura comprimento
+  const LOOK = [
+    ['#9BC27A', '#5D8A3F', '#D5EBB3', '#456B2C', 0, 0, 0, .5, .3],    // polinização (fava ainda é ovário)
+    ['#86AE5C', '#4F7A31', '#C4DF95', '#3E5E26', 1, 0, .1, 1, 1],     // fava verde, ponta amarela
+    ['#7E9550', '#52652F', '#B9C98E', '#43532A', .35, .05, .15, 1, 1],// escaldamento
+    ['#7B5A35', '#4A3420', '#A88457', '#3B2818', 0, .2, .2, .98, .99],// suadouro
+    ['#61412A', '#3A2617', '#8E6A4A', '#2E1E12', 0, .4, .3, .95, .98],// sol
+    ['#4B3122', '#2C1D14', '#76563F', '#22160F', 0, .6, .45, .92, .97],// sombra
+    ['#37251B', '#1E140E', '#5E4434', '#140D09', 0, .75, .7, .9, .96],// afinação
+    ['#2B1C15', '#160E0A', '#524035', '#0F0907', 0, .85, .85, .88, .95] // classificação
+  ];
+  const hex = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+  const mix = (a, b, t) => {
+    const A = hex(a), B = hex(b);
+    return `rgb(${A.map((v, i) => Math.round(v + (B[i] - v) * t)).join(',')})`;
+  };
+  const lerp = (a, b, t) => a + (b - a) * t;
+
+  let current = -1, ticking = false;
+  function render() {
+    ticking = false;
+    const mid = window.innerHeight * 0.5;
+    const centers = steps.map(s => { const r = s.getBoundingClientRect(); return r.top + r.height / 2; });
+    // posição contínua entre as etapas (0 a 7)
+    let p = 0;
+    if (mid <= centers[0]) p = 0;
+    else if (mid >= centers[centers.length - 1]) p = centers.length - 1;
+    else {
+      for (let i = 0; i < centers.length - 1; i++) {
+        if (mid >= centers[i] && mid < centers[i + 1]) { p = i + (mid - centers[i]) / (centers[i + 1] - centers[i]); break; }
+      }
+    }
+    const i = Math.floor(p), t = p - i, a = LOOK[i], b = LOOK[Math.min(i + 1, LOOK.length - 1)];
+    stage.style.setProperty('--bb', mix(a[0], b[0], t));
+    stage.style.setProperty('--bd', mix(a[1], b[1], t));
+    stage.style.setProperty('--bl', mix(a[2], b[2], t));
+    stage.style.setProperty('--bline', mix(a[3], b[3], t));
+    stage.style.setProperty('--tip', lerp(a[4], b[4], t).toFixed(3));
+    stage.style.setProperty('--wrinkle', lerp(a[5], b[5], t).toFixed(3));
+    stage.style.setProperty('--gloss', lerp(a[6], b[6], t).toFixed(3));
+    const active = Math.round(p);
+    if (active !== 0 && body) body.style.transform = `scale(${lerp(a[7], b[7], t).toFixed(3)},${lerp(a[8], b[8], t).toFixed(3)})`;
+    else if (body) body.style.removeProperty('transform');
+    if (barEl) barEl.style.width = `${((p + 1) / steps.length) * 100}%`;
+    if (active !== current) {
+      current = active;
+      stage.dataset.step = active;
+      steps.forEach((s, n) => s.classList.toggle('is-active', n === active));
+      if (countEl) countEl.textContent = String(active + 1).padStart(2, '0');
+      if (labelEl) labelEl.textContent = steps[active].dataset.label;
+    }
+  }
+  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(render); } };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  render();
+
+  // inclinação 3D acompanhando o mouse (só no computador, sem movimento reduzido)
+  const canTilt = () => window.matchMedia('(hover: hover) and (min-width: 861px)').matches &&
+                        !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  section.addEventListener('pointermove', e => {
+    if (!canTilt() || !tilt) return;
+    const r = stage.getBoundingClientRect();
+    const x = Math.max(-1, Math.min(1, (e.clientX - (r.left + r.width / 2)) / (r.width / 2 + 200)));
+    const y = Math.max(-1, Math.min(1, (e.clientY - (r.top + r.height / 2)) / (r.height / 2)));
+    tilt.style.transform = `rotateY(${(x * 22).toFixed(1)}deg) rotateX(${(-y * 8).toFixed(1)}deg)`;
+    if (hl) hl.setAttribute('offset', (0.42 - x * 0.14).toFixed(3));   // o brilho "gira" junto
+  });
+  section.addEventListener('pointerleave', () => {
+    if (!tilt) return;
+    tilt.style.removeProperty('transform');
+    if (hl) hl.setAttribute('offset', '.42');
+  });
+});
+
 /* Header ganha sombra ao rolar */
 const header = document.querySelector('.header');
 if (header) {

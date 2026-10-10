@@ -990,3 +990,125 @@ a.info:hover{border-color:var(--forest);transform:translateY(-2px)}
 @media (max-width:960px){.posts{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.posts{grid-template-columns:1fr}}
 .placeholder.empty-state{border:1px solid var(--line);background:var(--paper)}
+
+/* =========================================================
+   BAUNILHAS — três frentes (consultoria em destaque)
+   ========================================================= */
+.vanilla-offers{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(1rem,2vw,1.5rem);align-items:stretch}
+.vanilla-offer{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(1.5rem,3vw,2rem);
+  display:flex;flex-direction:column;gap:.85rem}
+.vanilla-offer h3{font-size:var(--fs-md)}
+.vanilla-offer p{color:var(--muted)}
+.vanilla-offer .link-arrow{margin-top:auto;align-self:flex-start}
+.vanilla-offer__icon{width:40px;height:40px;color:var(--forest-2)}
+.vanilla-offer--main{background:var(--forest);border-color:var(--forest);color:var(--paper);grid-row:span 2}
+.vanilla-offer--main h3{font-size:var(--fs-lg)}
+.vanilla-offer--main p{color:#F1E7DD}
+.vanilla-offer__tag{align-self:flex-start;font-size:var(--fs-sm);font-weight:600;color:var(--sun)}
+.vanilla-offer__list{display:grid;gap:.6rem;margin:.25rem 0 .75rem}
+.vanilla-offer__list li{display:flex;gap:.6rem;align-items:flex-start;color:#F1E7DD}
+.vanilla-offer__list svg{width:20px;height:20px;flex:none;color:var(--sun);margin-top:.2rem}
+.vanilla-offer--main .btn{margin-top:auto;align-self:flex-start}
+@media (max-width:960px){.vanilla-offers{grid-template-columns:1fr 1fr}.vanilla-offer--main{grid-column:1/-1;grid-row:auto}}
+@media (max-width:600px){.vanilla-offers{grid-template-columns:1fr}}
+
+/* =========================================================
+   BAUNILHAS — "Como a fava verde vira baunilha"
+   Fava em SVG que muda de cor e forma com a rolagem (js/main.js, data-bean).
+   ========================================================= */
+.bean-story{background:linear-gradient(180deg,var(--sun-soft) 0%,#F8EBD0 100%);padding-block:var(--section) clamp(3rem,6vw,5rem);position:relative}
+.bean-story__head{max-width:680px}
+.bean-story__grid{display:grid;grid-template-columns:minmax(260px,400px) 1fr;gap:clamp(2rem,7vw,7rem);align-items:start}
+
+.bean-stage{position:sticky;top:calc(var(--header-h) + 1rem);height:calc(100vh - var(--header-h) - 2rem);min-height:520px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;
+  --bb:#86AE5C;--bd:#4F7A31;--bl:#C4DF95;--bline:#3E5E26;--tip:0;--wrinkle:0;--gloss:0}
+.bean-stage__float{perspective:900px;animation:beanFloat 6s ease-in-out infinite;will-change:transform}
+.bean-stage__tilt{transition:transform .5s var(--ease-out);transform-style:preserve-3d}
+.bean-svg{display:block;height:min(560px,calc(100vh - var(--header-h) - 9rem));width:auto;overflow:visible;
+  filter:drop-shadow(0 18px 18px rgba(42,32,27,.18))}
+.bean-stage__shadow{width:120px;height:16px;border-radius:50%;background:radial-gradient(rgba(42,32,27,.28),transparent 70%);
+  margin-top:-.5rem;animation:beanShadow 6s ease-in-out infinite}
+@keyframes beanFloat{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(-2.5deg)}}
+@keyframes beanShadow{0%,100%{transform:scaleX(1);opacity:1}50%{transform:scaleX(.85);opacity:.7}}
+
+/* cores da fava (variáveis atualizadas pelo JS conforme a rolagem) */
+.bean-svg .bs-dark{stop-color:var(--bd)}
+.bean-svg .bs-base{stop-color:var(--bb)}
+.bean-svg .bs-light{stop-color:var(--bl)}
+.bean-svg .bean__stem{stroke:var(--bd)}
+.bean-svg .bean__wrinkles{stroke:var(--bline);opacity:var(--wrinkle)}
+.bean-svg .bean__tip{opacity:var(--tip)}
+.bean-svg .bean__gloss{opacity:calc(var(--gloss) * .45)}
+.bean-svg .bean__frost{opacity:0;transition:opacity .8s}
+.bean-svg .bean__spec{opacity:calc(.25 + var(--gloss) * .3)}
+.bean-svg .bean__rim{opacity:.18}
+.bean-stage__glow{position:absolute;left:50%;top:44%;width:min(440px,90%);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,color-mix(in srgb,var(--bl) 22%,#fff) 0%,color-mix(in srgb,var(--bl) 10%,#FFF6E4) 35%,transparent 68%);opacity:.9;pointer-events:none;transition:background .4s}
+.bean-stage > :not(.bean-stage__glow){position:relative}
+.bean-svg .bean{transition:transform .9s var(--ease-out);transform-origin:100px 72px;transform-box:view-box}
+
+/* cenário de cada etapa: só o da etapa ativa aparece */
+.bean-svg .ov{opacity:0;transition:opacity .6s var(--ease-out)}
+.bean-stage[data-step="0"] .ov-flower,
+.bean-stage[data-step="2"] .ov-steam,
+.bean-stage[data-step="3"] .ov-box,
+.bean-stage[data-step="4"] .ov-sun,
+.bean-stage[data-step="5"] .ov-shade,
+.bean-stage[data-step="6"] .ov-crate,
+.bean-stage[data-step="7"] .ov-ruler{opacity:1}
+.bean-stage[data-step="7"] .bean__frost{opacity:.9}
+.bean-stage[data-step="0"] .bean{transform:scale(.5,.3)}
+.bean-svg .steam{stroke-dasharray:60 200;animation:steam 2.4s linear infinite}
+.bean-svg .steam--b{animation-delay:-.8s}
+.bean-svg .steam--c{animation-delay:-1.6s}
+@keyframes steam{from{stroke-dashoffset:260;transform:translateY(10px)}to{stroke-dashoffset:0;transform:translateY(-14px)}}
+
+.bean-stage__meter{display:grid;grid-template-columns:auto 1fr;gap:.35rem .9rem;align-items:baseline;width:min(100%,300px)}
+.bean-stage__count{font:600 var(--fs-sm)/1 var(--font-body);color:var(--muted);white-space:nowrap}
+.bean-stage__count b{font:700 1.75rem/1 var(--font-display);color:var(--forest)}
+.bean-stage__label{font:600 1.125rem/1.2 var(--font-display);color:var(--ink)}
+.bean-stage__bar{grid-column:1/-1;height:4px;border-radius:2px;background:rgba(107,79,65,.18);overflow:hidden}
+.bean-stage__bar i{display:block;height:100%;width:12.5%;background:var(--brand-gradient);transition:width .3s}
+
+.bean-step{min-height:72vh;display:flex;flex-direction:column;justify-content:center;gap:.9rem;max-width:520px;
+  opacity:.35;transition:opacity .5s var(--ease-out)}
+.bean-step.is-active{opacity:1}
+.bean-step__n{font:700 clamp(3rem,2rem + 3vw,4.5rem)/1 var(--font-display);color:var(--sun-dark);letter-spacing:-.04em}
+.bean-step h3{font-size:var(--fs-lg)}
+.bean-step p{font-size:var(--fs-md);line-height:1.55;color:var(--muted)}
+.bean-step__facts{display:flex;flex-wrap:wrap;gap:.5rem}
+.bean-step__facts li{background:var(--paper);border:1px solid #EED9A6;border-radius:var(--r-sm);padding:.35rem .75rem;font-weight:600;font-size:1rem;color:var(--forest)}
+.bean-step:first-child{min-height:60vh}
+.bean-steps{padding-bottom:10vh}
+
+.bean-yield{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:clamp(2.5rem,5vw,4rem) 0 0;
+  background:var(--forest);color:var(--paper);border-radius:var(--r-lg);padding:clamp(1.5rem,3vw,2.25rem)}
+.bean-yield div{display:flex;flex-direction:column;gap:.35rem;padding-inline:1rem;border-left:1px solid rgba(255,255,255,.16)}
+.bean-yield div:first-child{border-left:0;padding-left:0}
+.bean-yield dt{font:700 clamp(1.75rem,1.3rem + 1.6vw,2.5rem)/1.05 var(--font-display);color:var(--sun);letter-spacing:-.02em}
+.bean-yield dt span{display:block;font:500 1rem/1.3 var(--font-body);color:#F1E7DD;letter-spacing:0;margin-top:.2rem}
+.bean-yield dd{margin:0;color:#F1E7DD}
+.bean-story .source-note{margin-top:1.25rem}
+
+/* sem JS: todas as etapas legíveis */
+html:not(.js) .bean-step{opacity:1;min-height:0;padding-block:1.5rem}
+
+/* celular: a fava deita e fica presa no topo enquanto as etapas passam */
+@media (max-width:860px){
+  .bean-story__grid{grid-template-columns:minmax(0,1fr);gap:0}
+  .bean-stage{top:var(--header-h);height:auto;min-height:0;z-index:5;flex-direction:row;gap:1rem;padding:.75rem var(--gutter) 1.25rem;
+    background:linear-gradient(180deg,#F9EED6 78%,rgba(249,238,214,0));margin-inline:calc(var(--gutter) * -1)}
+  .bean-stage__float{width:min(40vw,200px);height:70px;flex:none;position:relative;animation:none;perspective:none}
+  .bean-stage__tilt{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-90deg)}
+  .bean-svg{height:min(40vw,200px);filter:drop-shadow(0 6px 6px rgba(42,32,27,.18))}
+  .bean-stage__label{font-size:1rem}
+  .bean-stage__shadow,.bean-stage__glow{display:none}
+  .bean-stage__meter{width:auto;flex:1;min-width:0}
+  .bean-stage__label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+  .bean-step{min-height:55vh;padding-block:2rem}
+  .bean-yield{grid-template-columns:1fr}
+  .bean-yield div{border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.16);padding-top:1rem}
+  .bean-yield div:first-child{border-top:0;padding-top:0}
+}
+@media (prefers-reduced-motion:reduce){.bean-stage__tilt{transition:none}}

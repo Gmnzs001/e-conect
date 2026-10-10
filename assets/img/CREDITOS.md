@@ -5,6 +5,7 @@
 | Arquivo | Uso | Observação |
 |---|---|---|
 | artigo-rastreabilidade-lei.jpg | Artigo "A rastreabilidade de alimentos" | Arte de divulgação da própria E-Conect |
+| baunilha-cerrado.jpg | Baunilhas (topo) | Foto real de baunilhal no Cerrado, do blog do Hélio Rodrigues (perfacilitadorhelio.blogspot.com, set. 2026). Confirmar autorização de uso |
 | baunilha-anatomia-flor.jpg | Baunilhas ("Conheça a flor da baunilha") | Infográfico fornecido pelo responsável do site em 02/10/2026. Corrigir a seta de "Coluna" (aponta para uma tépala). Confirmar origem e direitos de uso. |
 | logo-econect.png, logo-econect-h.png, logo-econect-h-claro.png, favicon.ico, favicon-96.png, apple-touch-icon.png, icon-512.png, og-econect.jpg | Topo, rodapé, ícone da aba e imagem de compartilhamento | Gerados a partir do logotipo oficial enviado pelo cliente (JPG 1600×1132). Se houver o arquivo vetorial (SVG/PDF/AI), refazer a partir dele |
 
@@ -21,8 +22,6 @@ Todas as fotos abaixo são **provisórias**. Substituir por fotos reais da E-Con
 | home-rastreabilidade-colheita.jpg | Card "Rastreabilidade FLV" | USDA via rawpixel — https://www.rawpixel.com/image/10995701 | CC0 / domínio público |
 | home-cursos-campo.jpg | Card "Cursos" | USDA via rawpixel — https://www.rawpixel.com/image/8708693 | CC0 / domínio público |
 | home-baunilha-favas.jpg | Card "Baunilhas", hero de Baunilhas | Diego Delso, Wikimedia Commons — https://commons.wikimedia.org/wiki/File:Vainilla_(Vanilla_planifolia),_Ampasipohy,_Nosy_Be,_Madagascar,_2025-09-21,_DD_25.jpg | CC BY-SA 4.0 (exige crédito visível — ver rodapé) |
-| baunilha-flor.jpg | Baunilhas, Conteúdos | Malcolm Manners, Wikimedia Commons — https://commons.wikimedia.org/wiki/File:Vanilla_planifolia_(6998639597).jpg | CC BY 2.0 (exige crédito visível — ver rodapé) |
-| baunilha-favas-verdes.jpg | Baunilhas | Krzysztof Ziarnek (Kenraiz), Wikimedia Commons — https://commons.wikimedia.org/wiki/File:Vanilla_planifolia_kz4.jpg | CC BY-SA 4.0 (exige crédito visível — ver rodapé) |
 | curso-alho-negro.jpg | Cursos | Jacek Halicki, Wikimedia Commons — https://commons.wikimedia.org/wiki/File:2023_Czarny_czosnek_fermentowany_(1).jpg | CC BY-SA 4.0 (exige crédito visível — ver rodapé) |
 | curso-maracuja.jpg | Cursos | Aldrina A Manashe, Wikimedia Commons — https://commons.wikimedia.org/w/index.php?curid=178937759 | CC0 |
 | curso-banana.jpg | Cursos, Conteúdos | Matt Bango, StockSnap — https://stocksnap.io/photo/banana-fruit-HVUP9HGVTD | CC0 |
