@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-a97232.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/figtree-latin-dab710.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=a60db828">
+<link rel="stylesheet" href="css/style.css?v=6ce2e07e">
 </head>
 
 <body>
@@ -164,42 +164,48 @@
   <div class="wrap">
     <div class="section-head">
       <h2 class="mark-title">Como a rastreabilidade funciona</h2>
-      <p>Seis etapas que acompanham o produto da propriedade até a mesa.</p>
+      <p>Cinco etapas, da propriedade até a mesa. O lote nasce na colheita e carrega tudo o que foi registrado no campo.</p>
     </div>
     <ol class="trace-steps">
-      <li class="trace-step">
+      <li class="trace-step trace-step--campo">
         <span class="trace-step__icon"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+        <span class="trace-step__phase">No campo</span>
         <span class="trace-step__n">Etapa 1</span>
         <h3>Origem do produto</h3>
         <p>Identificação do produtor, da propriedade e da área de cultivo.</p>
       </li>
-      <li class="trace-step">
-        <span class="trace-step__icon"><svg aria-hidden="true"><use href="#i-tag"/></svg></span>
-        <span class="trace-step__n">Etapa 2</span>
-        <h3>Registro do lote</h3>
-        <p>Cada colheita recebe um código com data, cultura e quantidade.</p>
-      </li>
-      <li class="trace-step">
+      <li class="trace-step trace-step--campo">
         <span class="trace-step__icon"><svg aria-hidden="true"><use href="#i-sprout"/></svg></span>
-        <span class="trace-step__n">Etapa 3</span>
+        <span class="trace-step__phase">No campo</span>
+        <span class="trace-step__n">Etapa 2</span>
         <h3>Acompanhamento da produção</h3>
-        <p>Registro dos tratos culturais e dos insumos usados no cultivo.</p>
+        <p>Registro dos tratos culturais e dos insumos usados no cultivo, com datas e receituário.</p>
       </li>
-      <li class="trace-step">
+      <li class="trace-step trace-step--colheita">
+        <span class="trace-step__icon"><svg aria-hidden="true"><use href="#i-tag"/></svg></span>
+        <span class="trace-step__phase">Na colheita</span>
+        <span class="trace-step__n">Etapa 3</span>
+        <h3>Registro do lote</h3>
+        <p>Na colheita, o lote recebe um código com data, cultura e quantidade, ligado aos registros do campo.</p>
+      </li>
+      <li class="trace-step trace-step--pos">
         <span class="trace-step__icon"><svg aria-hidden="true"><use href="#i-truck"/></svg></span>
+        <span class="trace-step__phase">Depois da colheita</span>
         <span class="trace-step__n">Etapa 4</span>
-        <h3>Transporte e distribuição</h3>
-        <p>O lote é acompanhado na embalagem, no transporte e na entrega.</p>
+        <h3>Embalagem e transporte</h3>
+        <p>A caixa sai etiquetada com o código do lote, que acompanha a embalagem, o transporte e a entrega.</p>
       </li>
-      <li class="trace-step">
+      <li class="trace-step trace-step--pos">
         <span class="trace-step__icon"><svg aria-hidden="true"><use href="#i-search"/></svg></span>
+        <span class="trace-step__phase">Depois da colheita</span>
         <span class="trace-step__n">Etapa 5</span>
         <h3>Consulta das informações</h3>
-        <p>Comprador e consumidor acessam os dados pelo código ou QR Code.</p>
+        <p>Comprador e consumidor acessam os dados do lote pelo código ou QR Code da etiqueta.</p>
       </li>
-      <li class="trace-step">
+      <li class="trace-step trace-step--result">
         <span class="trace-step__icon"><svg aria-hidden="true"><use href="#i-eye"/></svg></span>
-        <span class="trace-step__n">Resultado</span>
+        <span class="trace-step__phase">Resultado</span>
+        <span class="trace-step__n">&nbsp;</span>
         <h3>Mais transparência</h3>
         <p>Toda a cadeia ganha confiança, do produtor ao consumidor.</p>
       </li>
@@ -212,7 +218,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2 class="mark-title">Veja como a informação aparece</h2>
-      <p>Um exemplo de como etiqueta, histórico e acompanhamento podem ser apresentados.</p>
+      <p>Um exemplo de como a etiqueta e o histórico do lote podem ser apresentados.</p>
     </div>
     <div class="demo">
       <div class="demo-card">
@@ -232,6 +238,7 @@
             Aponte a câmera
           </div>
         </div>
+        <p class="demo-card__note">O código do lote liga a etiqueta aos registros do campo: insumos aplicados, datas e receituário.</p>
       </div>
 
       <div class="demo-card">
@@ -243,16 +250,6 @@
           <li><div><strong>Transporte</strong><small>Saída para o centro de distribuição</small></div><span class="when">Dia 91</span></li>
           <li class="is-now"><div><strong>Ponto de venda</strong><small>Disponível para consulta pelo QR Code</small></div><span class="when">Dia 92</span></li>
         </ol>
-      </div>
-
-      <div class="demo-card panel">
-        <h3><svg aria-hidden="true"><use href="#i-chart"/></svg>Painel de acompanhamento</h3>
-        <div class="panel__grid">
-          <div class="kpi"><small>Lotes registrados</small><strong>24</strong><div class="kpi__bar"><i style="width:80%"></i></div></div>
-          <div class="kpi"><small>Com origem completa</small><strong>22</strong><div class="kpi__bar"><i style="width:92%"></i></div></div>
-          <div class="kpi"><small>Em transporte</small><strong>3</strong><div class="kpi__bar"><i style="width:13%"></i></div></div>
-          <div class="kpi"><small>Consultas ao QR Code</small><strong>58</strong><div class="kpi__bar"><i style="width:60%"></i></div></div>
-        </div>
       </div>
     </div>
   </div>
