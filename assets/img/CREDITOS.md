@@ -5,9 +5,8 @@
 | Arquivo | Uso | Observação |
 |---|---|---|
 | artigo-rastreabilidade-lei.jpg | Artigo "A rastreabilidade de alimentos" | Arte de divulgação da própria E-Conect |
-| baunilha-cerrado.jpg | Baunilhas (topo) | Foto real de baunilhal no Cerrado, do blog do Hélio Rodrigues (perfacilitadorhelio.blogspot.com, set. 2026). Confirmar autorização de uso |
-| baunilha-anatomia-flor.jpg | Baunilhas ("Conheça a flor da baunilha") | Infográfico fornecido pelo responsável do site em 02/10/2026. Corrigir a seta de "Coluna" (aponta para uma tépala). Confirmar origem e direitos de uso. |
-| logo-econect.png, logo-econect-h.png, logo-econect-h-claro.png, favicon.ico, favicon-96.png, apple-touch-icon.png, icon-512.png, og-econect.jpg | Topo, rodapé, ícone da aba e imagem de compartilhamento | Gerados a partir do logotipo oficial enviado pelo cliente (JPG 1600×1132). Se houver o arquivo vetorial (SVG/PDF/AI), refazer a partir dele |
+| baunilha-anatomia-flor.jpg | Baunilhas ("Conheça a flor da baunilha") | Infográfico fornecido pelo responsável do site em 02/10/2026. Arte em correção pelo responsável do site (13/10/2026): substituir pela versão nova quando chegar. |
+| logo-econect.png, logo-econect-h.png, logo-econect-h-claro.png, favicon.ico, favicon-96.png, apple-touch-icon.png, icon-512.png, og-econect.jpg | Topo, rodapé, ícone da aba e imagem de compartilhamento | Gerados a partir do logotipo oficial enviado pelo cliente (JPG 1600×1132). Versão vetorial (SVG/PDF) gerada em 13/10/2026 e entregue fora do repositório (pasta econect-logo-vetor) |
 
 ## Imagens de demonstração
 
@@ -36,3 +35,10 @@ Todas as fotos abaixo são **provisórias**. Substituir por fotos reais da E-Con
 | campo-produtor-estufa.jpg | Sobre (galeria) | USDA via rawpixel — https://www.rawpixel.com/image/8708534 | CC0 / domínio público |
 | campo-colheita-mecanizada.jpg | Sobre (galeria) | USDA via rawpixel — https://www.rawpixel.com/image/3306830 | CC0 / domínio público |
 | conteudo-produtora-estufa.jpg | Contato, Conteúdos | USDA via rawpixel — https://www.rawpixel.com/image/3336059 | CC0 / domínio público |
+| baunilha-favas-cacho.jpg | Baunilhas (topo) | B.navez, Wikimedia Commons — https://commons.wikimedia.org/w/index.php?curid=6969739 | CC BY-SA 3.0 (exige crédito visível — ver rodapé) |
+| blog-baunilhas-cerrado.webp | Início ("Do blog"), Instagram | Mokkie, Wikimedia Commons — https://commons.wikimedia.org/w/index.php?curid=31835133 | CC BY-SA 3.0 (exige crédito visível — ver rodapé) |
+| blog-rastreabilidade-vegetal.webp | Início ("Do blog"), Conteúdos, Instagram | Attahokah, Wikimedia Commons — https://commons.wikimedia.org/w/index.php?curid=163205999 | CC0 |
+| blog-alho.webp | Início ("Do blog"), Instagram | rawpixel — https://www.rawpixel.com/image/5911836 | CC0 |
+| agro-queijaria.jpg | Consultorias (regularização de agroindústria) | Carol M. Highsmith via rawpixel — https://www.rawpixel.com/image/433967 | CC0 / domínio público |
+| rotulagem-geleia.jpg | Consultorias (rotulagem) | rawpixel — https://www.rawpixel.com/image/5923151 | CC0 |
+| mentoria-campo.jpg | Consultorias (mentoria) | AusAID / DFAT, Wikimedia Commons — https://commons.wikimedia.org/w/index.php?curid=32167978 | CC BY 2.0 (exige crédito visível — ver rodapé) |
